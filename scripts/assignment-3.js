@@ -1,4 +1,16 @@
-let online; // Undefined as we wait for user input
-online = true; // And let's give it a boolean value to test it
+let username = prompt("Enter your username here:");
+let password = prompt("Enter your password here:")
 
-console.log("You are online");
+function isValidPassword (username, password) {
+  if (password.includes (username)) {
+    return false;
+  } else if (password.includes(" ")) {
+    return false;
+  } else if (password.length < 8) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
+console.log(isValidPassword(username, password));
