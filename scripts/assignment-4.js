@@ -29,4 +29,4 @@ function generateRandomArray (length) {
     return outputNumber;
 };
 
-console.log(generateRandomArray(2));
+console.log(generateRandomArray(2)); // Switch out the number value to get a different set of random numbers
