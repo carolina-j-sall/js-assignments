@@ -7,6 +7,11 @@ function guessNumberGame () {
   while (guess !== target) {
     console.log(`Target: ${target}. Guess: ${guess}`);
     guess = parseFloat(prompt("Have a guess:"));
+    if (guess > target) {
+        console.log("A bit to high. Try again.");
+    } else {
+        console.log("To low. Guess again.");
+    }
   }
   console.log(`Congratulations, you guessed right! The numbers was ${target} and you guessed ${guess}`);
 };
@@ -16,4 +21,4 @@ guessNumberGame();
 // To do
 // [] Set target to 1
 // [x] Exit while loop when guess is right
-// [] Add if and else statement for low or high guess
+// [x] Add if and else statement for low or high guess
