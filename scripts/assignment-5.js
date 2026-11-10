@@ -4,6 +4,7 @@
 const account = {
   accountName: "Carolina J. Säll",
   balance: 105082,
+  currency: "SEK",
   getBalance () {
       return this.balance;
   },
@@ -34,7 +35,7 @@ const account = {
 };
 
 function atm () {
-  const message = parseFloat(prompt("Select a choice 1.) See your balance 2.) Make a deposit 3.) Make a withdrawal 4.) Get the account holders name"));
+  const message = parseFloat(prompt("Select a choice 1 = See your balance. 2 = Make a deposit. 3 = Make a withdrawal. 4 = Get the account holders name. 5 = See the currency"));
   
   switch (message) {
     case 1:
@@ -63,8 +64,11 @@ function atm () {
     case 4: 
       alert(`The account holders name is: ${account.getAccountName()}`);
       break;
+    case 5: // Added my own option 5 just to see that I have understood the object and user interaction fully without any help from the assignment or Claude
+      alert(`The currency of this account is ${account.currency}`);
+      break;
     default: 
-      alert(account.accountError("Please choose a valid option, between 1 to 4."));
+      alert(account.accountError("Please choose a valid option, between 1 to 5."));
   }
 };
 atm();
